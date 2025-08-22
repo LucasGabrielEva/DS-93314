@@ -45,7 +45,7 @@ public class Main {
         System.out.println("autor " + l1.getAutor());
         System.out.println("ISBN " + l1.getISBN());
         System.out.println("numero de paginas " + l1.getNumerodepaginas());
-        System.out.println("precp " + l1.getPreco());
+        System.out.println("preco " + l1.getPreco());
 
 
 
