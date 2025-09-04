@@ -1,6 +1,20 @@
 package org.example.atv3;
 
-public  abstract class Funcionario {
+public abstract class Funcionario {
+    protected String nome;
+    protected String dataNaciento;
+    protected Sexo sexo;
+    protected Setor setor;
+    protected double salarioBase;
+
+    public Funcionario(String nome, String dataNaciento, Sexo sexo, Setor setor, double salarioBase) {
+        this.nome = nome;
+        this.dataNaciento = dataNaciento;
+        this.sexo = sexo;
+        this.setor = setor;
+        this.salarioBase = salarioBase;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -9,12 +23,12 @@ public  abstract class Funcionario {
         this.nome = nome;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public String getDataNaciento() {
+        return dataNaciento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setDataNaciento(String dataNaciento) {
+        this.dataNaciento = dataNaciento;
     }
 
     public Sexo getSexo() {
@@ -40,26 +54,13 @@ public  abstract class Funcionario {
     public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
-
-    protected String nome;
-    protected String dataNascimento;
-    protected  Sexo sexo;
-    protected Setor setor;
-    protected double salarioBase;
-
-    public Funcionario(String nome, String dataNascimento, Sexo sexo, Setor setor, double salarioBase) {
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.sexo = sexo;
-        this.setor = setor;
-        this.salarioBase = salarioBase;
-    }
+    public abstract double gatSalarioFinal();
 
     @Override
     public String toString() {
         return "Funcionario{" +
                 "nome='" + nome + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
+                ", dataNaciento='" + dataNaciento + '\'' +
                 ", sexo=" + sexo +
                 ", setor=" + setor +
                 ", salarioBase=" + salarioBase +
