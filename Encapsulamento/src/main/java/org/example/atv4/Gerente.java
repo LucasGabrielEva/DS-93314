@@ -6,6 +6,16 @@ public class Gerente extends CargoDeConfianca implements Contracao {
     }
 
     @Override
+    public String toString() {
+        return "Gerente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", salarioBase=" + salarioBase +
+                '}';
+    }
+
+    @Override
     public void admitir(Funcionario funcionario) {
         System.out.println("funcionario contratado" + funcionario.nome);
 
