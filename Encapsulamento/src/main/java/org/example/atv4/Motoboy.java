@@ -31,6 +31,6 @@ public class Motoboy extends Funcionario{
 
     @Override
     public double salarioFinal() {
-        return salarioFinal();
+        return super.salarioBase;
     }
 }
