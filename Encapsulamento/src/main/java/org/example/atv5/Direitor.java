@@ -19,6 +19,6 @@ public class Direitor extends CargoDeConfianca implements Contracao {
 
     @Override
     public double getSalarioFinal() {
-        return  this.salarioBase * Bonificacao.DIREITOR.getValor();
+        return  (super.salarioBase * super.bonificacao.getValor()) * this.premio;
     }
 }
